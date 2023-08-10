@@ -1,10 +1,10 @@
-import { ThemeColorSelected } from "../constants";
+import { ThemeColorSelected } from '../constants'
 
 const useSetColor = () => {
   const setColor = (color: string, type: ThemeColorSelected) => {
-    document.documentElement.style.setProperty(`--${type}-color`, color);
-  };
-  return { setColor };
-};
+    document.documentElement.style.setProperty(`--${type}-color`, color)
+  }
+  return { setColor }
+}
 
-export default useSetColor;
+export default useSetColor

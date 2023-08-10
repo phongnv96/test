@@ -3,7 +3,8 @@ import { memo, ReactNode } from 'react'
 // import { APIStatusCode, API_ERROR_MAPPING } from 'constants/errorMessages'
 
 import { Navigate } from 'react-router-dom'
-import { CurrentUserType, RolePermissionType } from '@/types'
+import { RolePermissionType } from '@/types'
+import { useGlobalContext } from '../contexts/GlobalContextProvider'
 
 export interface ProtectedRouteProps {
   children: ReactNode
@@ -11,24 +12,20 @@ export interface ProtectedRouteProps {
   access?: RolePermissionType[]
 }
 
-const ProtectedRoute = ({ access, redirectPath, children }: ProtectedRouteProps) => {
-  // fix me
-  const currentUser: CurrentUserType = {
-    roles: ['admin'],
-    permissions: ['export'],
-  }
+const ProtectedRoute = ({ access, children }: ProtectedRouteProps) => {
+  const { currentUser } = useGlobalContext()
 
   let result = null
   // nếu ko truyền access => thì path là public
   if (access && access.length > 0) {
     result = access.find(
-      (item) => !(currentUser.roles?.includes(item) || currentUser.permissions?.includes(item))
+      (item) => !(currentUser?.roles?.includes(item) || currentUser?.permissions?.includes(item))
     )
   }
+
   // nếu tồn tại 1 Role không thỏa mãn => chặn
   if (result) {
-    // notification.info({ message: API_ERROR_MAPPING[APIStatusCode.FORBIDDEN] })
-    return <Navigate to={redirectPath ?? '/'} />
+    return <Navigate to={'/not-allow'} />
   }
 
   return <>{children}</>

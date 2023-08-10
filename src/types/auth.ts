@@ -21,8 +21,4 @@ export enum RolePermissionType {
   // Roles
   ADMIN = 'admin',
   GUEST = 'guest',
-
-  // Permissions
-  EXPORT_EXCEL = 'export',
-  VIEW_TABLE = 'view',
 }

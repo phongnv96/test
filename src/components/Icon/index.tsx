@@ -1,15 +1,16 @@
-import { ICON_LOCAL } from "./IconDefine"
+import { ICON_LOCAL } from './IconDefine'
 
 interface IconProps {
-    name: keyof typeof ICON_LOCAL
+  name: keyof typeof ICON_LOCAL
+  [x: string]: any
 }
 const Icon = (props: IconProps) => {
-  const {name} = props
+  const { name, className = '' } = props
   const IconComponent = ICON_LOCAL[name]
   return (
-    <span>
-<IconComponent />
-    </span> 
+    <span className={className} {...props}>
+      <IconComponent />
+    </span>
   )
 }
 

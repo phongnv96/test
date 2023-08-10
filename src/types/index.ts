@@ -1,4 +1,3 @@
-
 import { RouteObject } from 'react-router-dom'
 
 import { API_STATUS } from '../constants'
@@ -19,14 +18,19 @@ export type LoadingState = {
 export type IconLocalType = keyof typeof ICON_LOCAL
 
 export type NavItemType = {
-  id: any,
-  iconName: IconLocalType,
-  link: string,
-  label: string,
+  id: any
+  iconName: IconLocalType
+  link: string
+  label: string
   bag?: number
 }
 
+export type MenuDropType = {
+  id: any
+  link: string
+  text: string
+}
 
-export * from './auth';
-export * from './error';
-export * from './theme';
+export * from './auth'
+export * from './error'
+export * from './theme'

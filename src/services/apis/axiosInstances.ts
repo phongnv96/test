@@ -4,7 +4,7 @@ import { setMainInterceptor } from './interceptors'
 const headers: AxiosRequestHeaders = { 'Content-Type': 'application/json' } as AxiosRequestHeaders
 
 const http = axios.create({
-  baseURL: process.env.REACT_APP_API_URI,
+  baseURL: import.meta.env.VITE_API_URI,
   headers,
 })
 

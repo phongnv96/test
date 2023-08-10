@@ -1,7 +1,6 @@
 import { handleErrorCommon } from '@/utils'
 import { AxiosInstance, AxiosError } from 'axios'
 
-
 const setMainInterceptor = (instance: AxiosInstance) => {
   instance.interceptors.request.use(async (config) => {
     const customConfigs = { ...config }

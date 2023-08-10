@@ -1,14 +1,11 @@
-import { CurrentUserType, RolePermissionType } from '@/types'
+import { useGlobalContext } from '@/contexts/GlobalContextProvider'
+import { RolePermissionType } from '@/types'
 import { useMemo } from 'react'
 
 const useAccess = () => {
   // State quyền truy cập từ accessList
 
-  // fix me ===> sửa thành object lấy từ store
-  const currentUser: CurrentUserType = {
-    roles: ['admin'],
-    permissions: ['export'],
-  }
+  const { currentUser } = useGlobalContext()
 
   const accessObj = useMemo(() => {
     const isAuthen = !!currentUser

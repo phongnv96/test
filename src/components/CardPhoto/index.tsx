@@ -1,13 +1,17 @@
 interface CardPhotoProps {
-    imageUrl: string,
-    time: string,
+  imageUrl: string
+  time: string
+  className?: string
 }
 
 const CardPhoto = (props: CardPhotoProps) => {
-  const {imageUrl, time } = props
+  const { imageUrl, time, className } = props
   return (
-    <div className="flex justify-center items-center min-h-[300px] relative bg-no-repeat bg-cover" style={{backgroundImage: `url(${imageUrl})`}}>
-        {/* <img
+    <div
+      className={`flex justify-center items-center min-h-[300px] relative bg-no-repeat bg-cover ${className}`}
+      style={{ backgroundImage: `url(${imageUrl})` }}
+    >
+      {/* <img
         // srcSet="/path/to/image-480w.jpg 480w,
         //         /path/to/image-768w.jpg 768w,
         //         /path/to/image-1024w.jpg 1024w"

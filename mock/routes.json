@@ -1,3 +1,7 @@
 {
-  "/api/posts": "/posts"
+  "/api/posts": "/posts",
+  "/api/chart/days": "/days",
+  "/api/chart/months": "/months",
+  "/api/chart/quarters": "/quarters",
+  "/api/chart/weeks": "/weeks"
 }
