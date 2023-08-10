@@ -15,7 +15,6 @@ const Menu = (props: MenuProps) => {
   const { children, menus, isOpen, onClose } = props
   const [bottomHeight, setBottomHeight] = useState<any>(0)
   const childRef = useOutsideClick(() => {
-    console.log('Clicked outside of MyComponent')
     if (onClose) {
       onClose()
     }
