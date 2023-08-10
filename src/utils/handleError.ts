@@ -12,13 +12,9 @@ const handleErrorCommon = (error: any) => {
   if (httpCode) {
     // The request was made and the server responded with a status code
     if (httpCode >= APIStatusCode.INTERNAL_SERVER) {
-      // notification.error({
-      //   message: API_ERROR_MAPPING[APIStatusCode.INTERNAL_SERVER],
-      // })
+       // handle errors by status
     } else if (httpCode === APIStatusCode.RATE_LIMIT) {
-      // notification.error({
-      //   message: API_ERROR_MAPPING[APIStatusCode.RATE_LIMIT],
-      // })
+      // handle errors by status
     }
   }
 }
@@ -28,9 +24,8 @@ const handleErrorWithInnerMessage = (error: AxiosError<InnerError>) => {
   const errorMessage = INNER_ERROR_MAPPING[messageCode]
 
   if (errorMessage) {
-    // notification.error({ message: errorMessage })
+    // handle errors by server define
   } else {
-    // notification.error({ message: API_ERROR_MAPPING[APIStatusCode.INTERNAL_SERVER] })
   }
 }
 
