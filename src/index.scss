@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto_Sans_JP';
+  src: url('./assets/fonts/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+:root {
+  font-family: Inter, Noto_Sans_JP;
+
+  // color theme
+  --color-dark: #2E2E2E;
+  --color-dark-500:  #414141;
+  --color-gray-400: #777777;
+  --color-light:  #FFFFFF;
+
+  // color primary
+  --color-primary-300: #FFCC21;
+  --color-primary-400: #FF963C;
+  --color-primary-500: #EA6C00;
+  --color-primary-gradient: linear-gradient(180deg, var(--color-primary-300) 0%, var(--color-primary-400) 100%);
+
+  // secondary color
+  --color-secondary-300: #8FE9D0
+
+}

@@ -1,0 +1,60 @@
+// 0 = off, 1 = warning, 2 = error
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "plugins": ["react", "prettier", "import"],
+  "extends": [
+    "prettier",
+    "react-app",
+    "plugin:import/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "import/imports-first": "error",
+    "import/order": [
+      "error",
+      {
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "builtin",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ],
+    "import/newline-after-import": "error",
+    "import/no-unresolved": "off",
+    "import/named": "off",
+    "import/no-named-as-default-member": "off",
+    "react/jsx-indent-props": [2, 2],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "off",
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+    "no-duplicate-imports": "error",
+    "react/style-prop-object": 0,
+    "arrow-body-style": [2, "as-needed"],
+    "object-shorthand": [2, "always"],
+    "no-template-curly-in-string": "error",
+    "import/no-named-as-default": "off"
+  }
+}
