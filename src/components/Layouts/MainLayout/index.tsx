@@ -1,13 +1,12 @@
 import React from 'react'
 
 
-import { Navigate, Outlet } from 'react-router-dom'
-
-
+import { Outlet } from 'react-router-dom'
+import Header from './Header'
 
 const MainLayout: React.FC = () => (
   <main className="">
-      <Navigate replace to="/home" />
+     <Header />
       <Outlet />
   </main>
 )

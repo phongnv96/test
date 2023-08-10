@@ -1,1 +1,9 @@
-export {default as Loading} from './Loading'
+export {default as Loading} from './Loading';
+export {default as Bag} from './Bag';
+export {default as CardColumn} from './CardColumn';
+export {default as CardPhoto} from './CardPhoto';
+export {default as CardRecord} from './CardRecord';
+export {default as Button} from './Button';
+export {default as ShapeHexagon} from './ShapeHexagon';
+export {default as Icon} from './Icon';
+export {default as NavItem} from './NavItem';

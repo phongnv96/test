@@ -1,5 +1,5 @@
 import { HomeRouter } from "@/features/home"
-import { MainLayout } from "@/layouts"
+import { MainLayout } from "@/components/Layouts"
 import { CustomRouteObject, RolePermissionType } from "@/types"
 import { renderRoutes } from "@/utils"
 import { Navigate, useRoutes } from "react-router-dom"
